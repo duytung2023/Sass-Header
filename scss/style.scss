@@ -1,0 +1,56 @@
+@import "config", "utilities", "buttons";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $light-color;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  line-height: 1.6;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: set-text-color($primary-color);
+}
+header {
+  @include set-background($primary-color);
+  height: 600px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      padding: 10px;
+    }
+    a:hover {
+      color: $secondary-color;
+    }
+  }
+}
+a {
+  color: set-text-color($primary-color);
+  transition: all 300ms ease;
+}
+.content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+@import 'mobile';
